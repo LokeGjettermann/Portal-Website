@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0B1427;
+}
+
+.navbar {
+    display: flex;
+    align-items: center; /* Centrerer elementer lodret */
+    justify-content: space-between; /* Placerer elementer med lige plads mellem dem */
+    background-color: #111111;
+    padding: 10px 20px;
+    color: white;
+    flex-wrap: nowrap; /* Forhindrer linjeskift */
+}
+
+.navbar .image-container {
+    display: flex;
+    align-items: center; /* Centrerer billedet lodret */
+    justify-content: flex-start; /* Holder billedet til venstre */
+    flex: 0 0 auto; /* Sørger for, at billedet ikke strækker sig */
+    margin-right: 20px; /* Plads mellem billedet og logoet */
+}
+
+.navbar .image-container img {
+    height: 40px; /* Fast højde på billedet */
+    width: auto; /* Bevarer billedets proportioner */
+    display: block;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    flex: 1 1 auto; /* Tillader logoet at vokse, men holder det på linje */
+    text-align: center; /* Centrerer logoet horisontalt */
+    margin: 0;
+}
+
+.navbar .logo span.orange {
+    color: orange; /* Orange farve til "O" */
+}
+
+.navbar .logo span.blue {
+    color: #00AEEF; /* Blå farve til "2" */
+}
+
+.navbar .menu {
+    display: flex;
+    align-items: center; /* Sørger for, at menuen bliver centreret lodret */
+    justify-content: flex-end; /* Holder menuen til højre */
+    gap: 20px; /* Giver mellemrum mellem links */
+    flex: 0 0 auto; /* Forhindrer menuen i at strække sig */
+}
+
+.navbar .menu a {
+    text-decoration: none; /* Fjerner understregning */
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Blødt farveskift ved hover */
+}
+
+.navbar .menu a:hover {
+    color: #00AEEF; /* Skift til blå farve ved hover */
+}
+
+.navbar .menu a.active {
+    color: #00AEEF;
+    font-weight: bold;
+}
+
+.navbar .menu a.active::before,
+.navbar .menu a.active::after {
+    content: '['; /* Tilføj klammer før og efter */
+    margin-right: 2px;
+}
+
+.navbar .menu a.active::after {
+    content: ']';
+    margin-left: 2px;
+}
+
+video {
+    display: block;
+    margin: 20px auto; /* Centrerer videoen */
+    width: 100%; /* Fylder hele bredden */
+    max-width: 800px; /* Maksimal bredde */
+    height: auto; /* Bevarer proportionerne */
+}
+
+.content {
+    max-width: 90%; /* Reducerer margin på små skærme */
+    margin: 20px auto;
+    text-align: center; /* Centrerer teksten */
+    color: white;
+}
+
+/* Medieforespørgsler til små skærme */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap; /* Tillader linjeskift for små skærme */
+        justify-content: center; /* Centrerer elementerne */
+    }
+
+    .navbar .image-container {
+        flex: 1 1 100%; /* Billedet fylder hele bredden */
+        justify-content: center;
+        margin-bottom: 10px; /* Plads under billedet */
+    }
+
+    .navbar .logo {
+        flex: 1 1 100%; /* Logo fylder hele bredden */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .navbar .menu {
+        flex: 1 1 100%; /* Menuen fylder hele bredden */
+        justify-content: center;
+        margin-top: 10px; /* Plads over menuen */
+    }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hovedmenu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0B1427;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Sørger for korrekt placering */
+            background-color: #111111;
+            padding: 10px 20px;
+            color: white;
+            position: relative;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .navbar .logo span.orange {
+            color: orange; /* Orange farve til "O" */
+        }
+
+        .navbar .logo span.blue {
+            color: #00AEEF; /* Blå farve til "2" */
+        }
+
+        .navbar .menu {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .navbar .menu a {
+            text-decoration: none;
+            color: white;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+
+        .navbar .menu a:hover {
+            color: #00AEEF; /* Blå farve */
+        }
+
+        .navbar .menu a.active {
+            color: #00AEEF;
+            font-weight: bold;
+        }
+
+        .navbar .menu a.active::before,
+        .navbar .menu a.active::after {
+            content: '[';
+            margin-right: 2px;
+        }
+
+        .navbar .menu a.active::after {
+            content: ']';
+            margin-left: 2px;
+        }
+
+        .navbar .image-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .image-container img {
+            height: 40px; /* Juster højden på billedet */
+            width: auto;
+            margin-right: 20px; /* Plads mellem billedet og logoet/menuen */
+        }
+
+        video {
+            display: block;
+            margin: 20px auto; /* Centrerer videoen */
+            width: 900px; /* Sætter videoens bredde */
+        }
+
+        .content {
+            max-width: 800px; /* Begrænser tekstens bredde */
+            margin: 0 auto; /* Centrerer teksten */
+            text-align: center; /* Centrerer teksten horisontalt */
+            color: white;
+            margin-top: 20px; /* Plads over teksten */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <!-- Container til billedet -->
+        <div class="image-container">
+            <img src="27516-2-portal-photos-thumb.png" alt="Logo">
+        </div>
+        <div class="logo">
+            P<span class="orange">O</span>RTAL
+        </div>
+        <div class="menu">
+            <a href="#" class="active">HOME</a>
+            <a href="#">GAME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">PLAY ON STEAM</a>
+        </div>
+    </div>
+
+    <!-- Video elementet med autoplay og muted -->
+    <video controls autoplay muted>
+        <source src="Video intro.mov" type="video/mp4" />
+        Din browser understøtter ikke videoafspilning.
+    </video>
+
+    <!-- Tekst under videoen -->
+    <div class="content">
+        <h2>Welcome to Portal</h2>
+        <p>Portal is an award-winning puzzle game where you play as Chell, navigating through a series of challenging rooms using a unique portal gun. This gun's ability to create portals between two surfaces allows you to solve complex puzzles, overcome obstacles, and creatively manipulate the laws of physics. With its innovative gameplay, and thought-provoking story, Portal offers an unforgettable experience that challenges both your logic and problem-solving skills.</p>
+    </div>
+</body>
+</html>
